@@ -322,20 +322,35 @@ select.h-select {
 
 /* Mobile Adjustments (Landscape) */
 @media (max-height: 500px) and (orientation: landscape) {
-  #q-word {
-    font-size: 1.1rem !important; /* Giảm cỡ chữ nhỏ hơn nữa khi xoay ngang */
-    padding: 5px 15px !important; /* Giảm khoảng cách đệm để khung mỏng lại */
-    max-width: 60vw; 
+  :root { 
+    --hud-h: 46px; 
+    --ctrl-h: 44px; 
   }
   
-  /* Đẩy các ô trả lời giãn ra một chút để tránh va chạm */
+  #q-container {
+    top: 48%; 
+  }
+  
+  /* Câu hỏi chính giữa - Đã thu nhỏ */
+  #q-word {
+    font-size: 1.5rem !important; /* Chữ câu hỏi nhỏ hơn */
+    padding: 6px 20px !important; /* Khung gọn hơn */
+    max-width: 70vw;
+    background: rgba(0, 8, 32, 0.9) !important;
+    border: 2px solid var(--nb) !important;
+  }
+
+  /* 4 ô câu trả lời - Đã thu nhỏ */
+  .zone-text {
+    font-size: 1.1rem !important; /* Chữ đáp án nhỏ hơn */
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  /* Giãn cách các thành phần */
   #zones-container {
     padding: 2px;
     gap: 5px;
-  }
-  
-  .zone-text {
-    font-size: 0.9rem !important;
   }
 }
 </style>
